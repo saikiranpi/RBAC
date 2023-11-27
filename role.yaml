@@ -1,0 +1,21 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: anand-role
+  namespace: development
+rules:
+- apiGroups: ["", "apps" , "networking.k8s.io"] 
+  resources: ["pods", "secrets" , "services" , "nodes" , "deployments", "replicasets", "ingresses"]
+  verbs: ["get", "update", "list", "create", "delete"]
+
+---
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bala-role
+  namespace: production
+rules:
+- apiGroups: ["", "apps" , "networking.k8s.io"] 
+  resources: ["pods", "secrets" , "services" , "nodes" , "deployments", "replicasets", "ingresses"]
+  verbs: ["get", "update", "list", "create", "delete"]

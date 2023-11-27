@@ -1,0 +1,10 @@
+#In this roles we are giving all access, thats why we called as admin roles 
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: new-cluster-admin-role
+rules:
+- apiGroups: ["*"]
+  resources: ["*"]
+  verbs: ["*"]
